@@ -1,0 +1,13 @@
+graph TD
+SF[Source File] --> Parser
+
+
+TE[Template Engine] --> |Input Template Class| ITF[Input Template File]
+ITF --> |Input Template|Parser
+
+
+TE --> |Output Template Class| OTF[Output Template File]
+OTF--> |Output Template|Compiler
+
+Parser --> |Syntax Tree| Compiler
+Compiler --> OF[Output File]
